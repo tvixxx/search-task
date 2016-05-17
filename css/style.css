@@ -1,5 +1,6 @@
 #WITHOUT RESET AND NORMALIZE!
 
+
 html, body {
   width: 100%;
   height: 100%;
@@ -138,6 +139,7 @@ html, body {
 .page--result-search {
   width: 100%;
   min-height: 100%;
+  margin-top: -40px;
 }
 
 .container--result-search {
@@ -153,31 +155,35 @@ html, body {
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   max-width: 960px;
-  padding: 100px 10px 20px 10px;
+  padding: 140px 10px 20px 10px;
   margin: 0 auto;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 @media (max-width: 990px) {
   .container--result-search {
-    padding: 100px 20px 20px 20px;
+    padding: 140px 20px 20px 20px;
   }
 }
 @media (max-width: 768px) {
   .container--result-search {
-    padding: 100px 30px 20px 30px;
+    padding: 140px 30px 20px 30px;
   }
 }
 @media (max-width: 480px) {
   .container--result-search {
-    padding: 60px 20px 20px 20px;
+    padding: 140px 20px 20px 20px;
   }
   .container--result-search:nth-of-type(1) {
-    padding-top: 80px;
+    padding-top: 140px;
   }
 }
 
 .search-form--result-search {
+  box-sizing: border-box;
   position: fixed;
   top: 0;
   width: 100%;
@@ -259,4 +265,65 @@ html, body {
 }
 .result-block__text-block p {
   color: rgba(0, 0, 0, 0.9);
+}
+
+.footer--result {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  height: 40px;
+  border-top: 1px solid rgba(42, 42, 42, 0.6);
+}
+.footer--result p {
+  font-size: 12px;
+  padding-top: 10px;
+  margin-right: auto;
+  text-align: left;
+}
+
+.pagination-block {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.pagination {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 80px;
+}
+.pagination__list {
+  display: block;
+  font-size: 0;
+}
+.pagination__item {
+  display: inline-block;
+  font-size: 18px;
+  margin-right: 20px;
+  text-align: center;
+  background-color: #e4e4e4;
+  background: linear-gradient(to bottom, #fcfcfc 1%, #f8f8f8 50%);
+}
+.pagination__link {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  color: #767676;
+  border: 1px solid #F7CF87;
+  transition: all .3s ease;
+  border-radius: 3px;
+}
+.pagination__link:hover {
+  border: 1px solid rgba(255, 132, 0, 0.6);
+  color: #000;
 }
