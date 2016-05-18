@@ -67,9 +67,14 @@ html, body {
 }
 
 .search-form__search {
-  width: 500px;
+  width: 71.4%;
   height: 40px;
   margin-right: 10px;
+}
+@media (max-width: 480px) {
+  .search-form__search {
+    width: 70%;
+  }
 }
 
 .search-form__search-field {
@@ -92,6 +97,7 @@ html, body {
 }
 @media (max-width: 480px) {
   .search-form__search-field {
+    width: 100%;
     font-size: 14px;
   }
 }
